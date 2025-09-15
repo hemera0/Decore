@@ -1,6 +1,7 @@
 # Decore
 Prototype Vulkan Game Engine
-![[banner.jpeg]]
+
+![banner](/banner.jpeg)
 Decore is an old Vulkan game engine framework I was working on but have since moved on to other projects. However it does make use of a few interesting features I could not find in other similar projects.
 
 Decore implements the following features

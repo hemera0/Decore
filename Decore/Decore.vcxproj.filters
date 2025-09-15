@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{0f14781b-2338-45e7-a883-c830496c87e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\Volk">
+      <UniqueIdentifier>{225455d2-2ce9-4b1d-9eac-39ba3bbc4786}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\ImGui">
+      <UniqueIdentifier>{f4a22930-ad3e-4dfc-bca4-105d72221b33}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Dependencies\Volk\volk.c">
+      <Filter>Dependencies\Volk</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Assets\glTF\StaticGLTFAsset.cpp" />
+    <ClCompile Include="Engine\Core\Application\Application.cpp" />
+    <ClCompile Include="Engine\Core\Camera\Camera.cpp" />
+    <ClCompile Include="Engine\Core\Input\InputSystem.cpp" />
+    <ClCompile Include="Engine\Core\Time\TimeSystem.cpp" />
+    <ClCompile Include="Engine\Renderer\Debug\DebugRenderer.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Buffers\Buffer.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Commands\CommandBuffer.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Commands\CommandPool.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Core\Instance.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Core\Surface.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Core\Swapchain.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Descriptors\Descriptor.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Device\Device.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Device\PhysicalDevice.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Images\Image.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Images\ImageView.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Images\Sampler.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Pipeline\Pipeline.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Shaders\Shader.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\VulkanRenderer.cpp" />
+    <ClCompile Include="Tests\Test1.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Engine\Core\Collision\CollisionCapsule.cpp" />
+    <ClCompile Include="Engine\Core\Collision\CollisionBox.cpp" />
+    <ClCompile Include="Engine\Core\Collision\CollisionSphere.cpp" />
+    <ClCompile Include="Engine\Renderer\Shadows\ShadowMapPass.cpp" />
+    <ClCompile Include="Engine\Renderer\Environment\EnvironmentInfo.cpp" />
+    <ClCompile Include="Engine\Renderer\Scene\Scene.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Descriptors\DescriptorLayout.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Pipeline\ComputePipeline.cpp" />
+    <ClCompile Include="Engine\Renderer\Clustering\ClusterLights.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Shaders\ShaderRegistry.cpp" />
+    <ClCompile Include="Engine\Assets\glTF\SkinnedGLTFAsset.cpp" />
+    <ClCompile Include="Engine\Assets\glTF\BaseGLTFAsset.cpp" />
+    <ClCompile Include="Engine\Renderer\Culling\SceneCuller.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassSpecification.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassAttachment.cpp" />
+    <ClCompile Include="..\Dependencies\FFX-CACAO\ffx_cacao.cpp" />
+    <ClCompile Include="..\Dependencies\FFX-CACAO\ffx_cacao_impl.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\backends\imgui_impl_vulkan.cpp" />
+    <ClCompile Include="Engine\Core\Collision\Collision.cpp" />
+    <ClCompile Include="Engine\Core\Components\Components.cpp" />
+    <ClCompile Include="Engine\Assets\Importer\GLTFImporter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Dependencies\Volk\volk.h">
+      <Filter>Dependencies\Volk</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Assets\glTF\StaticGLTFAsset.hpp" />
+    <ClInclude Include="Engine\Core\Application\Application.hpp" />
+    <ClInclude Include="Engine\Core\Camera\Camera.hpp" />
+    <ClInclude Include="Engine\Core\Input\InputSystem.hpp" />
+    <ClInclude Include="Engine\Core\Time\TimeSystem.hpp" />
+    <ClInclude Include="Engine\Renderer\Debug\DebugRenderer.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Buffers\Buffer.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Commands\CommandBuffer.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Commands\CommandPool.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Core\Instance.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Core\Surface.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Core\Swapchain.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Descriptors\Descriptor.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Device\Device.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Device\PhysicalDevice.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Images\Image.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Images\ImageView.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Images\Sampler.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Pipeline\Pipeline.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Shaders\Shader.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\VulkanRenderer.hpp" />
+    <ClInclude Include="Tests\Test1.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\BaseRenderer.hpp" />
+    <ClInclude Include="Engine\Core\Collision\CollisionCapsule.hpp" />
+    <ClInclude Include="Engine\Core\Collision\CollisionBox.hpp" />
+    <ClInclude Include="Engine\Core\Collision\CollisionSphere.hpp" />
+    <ClInclude Include="Engine\Renderer\Shadows\ShadowMapPass.hpp" />
+    <ClInclude Include="Engine\Renderer\Environment\EnvironmentInfo.hpp" />
+    <ClInclude Include="Engine\Renderer\Scene\Scene.hpp" />
+    <ClInclude Include="Engine\Assets\BaseAsset.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Descriptors\DescriptorLayout.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Pipeline\ComputePipeline.hpp" />
+    <ClInclude Include="Engine\Renderer\Clustering\ClusterLights.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Shaders\ShaderRegistry.hpp" />
+    <ClInclude Include="Engine\Assets\glTF\SkinnedGLTFAsset.hpp" />
+    <ClInclude Include="Engine\Assets\glTF\BaseGLTFAsset.hpp" />
+    <ClInclude Include="Engine\Renderer\Culling\SceneCuller.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassSpecification.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassAttachment.hpp" />
+    <ClInclude Include="Engine\Assets\Assets.hpp" />
+    <ClInclude Include="Engine\Core\Core.hpp" />
+    <ClInclude Include="Engine\Core\Collision\Collision.hpp" />
+    <ClInclude Include="..\Dependencies\imgui\imconfig.h" />
+    <ClInclude Include="..\Dependencies\imgui\imgui.h" />
+    <ClInclude Include="..\Dependencies\imgui\imgui_internal.h" />
+    <ClInclude Include="..\Dependencies\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\Dependencies\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\Dependencies\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\Dependencies\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="..\Dependencies\imgui\backends\imgui_impl_vulkan.h" />
+    <ClInclude Include="Engine\Core\Components\Components.hpp" />
+    <ClInclude Include="Engine\Assets\Importer\GLTFImporter.hpp" />
+  </ItemGroup>
+</Project>

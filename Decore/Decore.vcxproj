@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{931c17fe-703c-44c9-b5b7-981c48a2a047}</ProjectGuid>
+    <RootNamespace>Decore</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>..\Dependencies\entt\single_include;..\Dependencies\JoltPhysics;..\Dependencies\Volk;C:\Program Files\KTX-Software\include;..\Dependencies\tinygltf;..\Dependencies\stb;..\Dependencies\glm;..\Dependencies\shaderc\Include;..\Dependencies\GLFW;$(VULKAN_SDK)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Dependencies\JoltPhysics\Lib;..\Dependencies\FFX-CACAO\;C:\Program Files\KTX-Software\lib;..\Dependencies\shaderc\Lib\Debug;..\Dependencies\GLFW\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>..\Dependencies\entt\single_include;..\Dependencies\JoltPhysics;..\Dependencies\Volk;C:\Program Files\KTX-Software\include;..\Dependencies\FidelityFX\sdk\include;..\Dependencies\FidelityFX\ffx-api\include;..\Dependencies\tinygltf;..\Dependencies\stb;..\Dependencies\glm;..\Dependencies\shaderc\Include;..\Dependencies\GLFW;$(VULKAN_SDK)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\KTX-Software\lib;..\Dependencies\FFX-CACAO;..\Dependencies\shaderc\Lib\Release;..\Dependencies\GLFW\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;VK_USE_PLATFORM_WIN32_KHR;VK_NO_PROTOTYPES;JPH_FLOATING_POINT_EXCEPTIONS_ENABLED;JPH_PROFILE_ENABLED;JPH_DEBUG_RENDERER;JPH_OBJECT_STREAM;NOMINMAX;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Jolt_d.lib;shaderc_combined_d.lib;glfw3_mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VULKAN_SDK)\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt;msvcrtd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <LinkStatus>
+      </LinkStatus>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLM_ENABLE_EXPERIMENTAL;GLM_FORCE_DEPTH_ZERO_TO_ONE;VK_USE_PLATFORM_WIN32_KHR;VK_NO_PROTOTYPES;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>shaderc_combined.lib;glfw3_mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(VULKAN_SDK)\Lib;</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt;msvcrtd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Dependencies\FFX-CACAO\ffx_cacao.cpp" />
+    <ClCompile Include="..\Dependencies\FFX-CACAO\ffx_cacao_impl.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\backends\imgui_impl_vulkan.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\Dependencies\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\Dependencies\Volk\volk.c" />
+    <ClCompile Include="Engine\Assets\glTF\BaseGLTFAsset.cpp" />
+    <ClCompile Include="Engine\Assets\glTF\StaticGLTFAsset.cpp" />
+    <ClCompile Include="Engine\Assets\glTF\SkinnedGLTFAsset.cpp" />
+    <ClCompile Include="Engine\Assets\Importer\GLTFImporter.cpp" />
+    <ClCompile Include="Engine\Core\Application\Application.cpp" />
+    <ClCompile Include="Engine\Core\Camera\Camera.cpp" />
+    <ClCompile Include="Engine\Core\Collision\Collision.cpp" />
+    <ClCompile Include="Engine\Core\Collision\CollisionBox.cpp" />
+    <ClCompile Include="Engine\Core\Collision\CollisionCapsule.cpp" />
+    <ClCompile Include="Engine\Core\Collision\CollisionSphere.cpp" />
+    <ClCompile Include="Engine\Core\Components\Components.cpp" />
+    <ClCompile Include="Engine\Core\Input\InputSystem.cpp" />
+    <ClCompile Include="Engine\Core\Time\TimeSystem.cpp" />
+    <ClCompile Include="Engine\Renderer\Clustering\ClusterLights.cpp" />
+    <ClCompile Include="Engine\Renderer\Culling\SceneCuller.cpp" />
+    <ClCompile Include="Engine\Renderer\Environment\EnvironmentInfo.cpp" />
+    <ClCompile Include="Engine\Renderer\Scene\Scene.cpp" />
+    <ClCompile Include="Engine\Renderer\Shadows\ShadowMapPass.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Descriptors\DescriptorLayout.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Pipeline\ComputePipeline.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassAttachment.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassSpecification.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Shaders\ShaderRegistry.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Engine\Renderer\Debug\DebugRenderer.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Buffers\Buffer.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Commands\CommandBuffer.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Commands\CommandPool.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Core\Instance.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Core\Surface.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Core\Swapchain.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Descriptors\Descriptor.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Device\Device.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Device\PhysicalDevice.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Images\Image.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Images\ImageView.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Images\Sampler.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Pipeline\Pipeline.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\Shaders\Shader.cpp" />
+    <ClCompile Include="Engine\Renderer\Vulkan\VulkanRenderer.cpp" />
+    <ClCompile Include="Tests\Test1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Dependencies\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="..\Dependencies\imgui\backends\imgui_impl_vulkan.h" />
+    <ClInclude Include="..\Dependencies\imgui\imconfig.h" />
+    <ClInclude Include="..\Dependencies\imgui\imgui.h" />
+    <ClInclude Include="..\Dependencies\imgui\imgui_internal.h" />
+    <ClInclude Include="..\Dependencies\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\Dependencies\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\Dependencies\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\Dependencies\Volk\volk.h" />
+    <ClInclude Include="Engine\Assets\Assets.hpp" />
+    <ClInclude Include="Engine\Assets\BaseAsset.hpp" />
+    <ClInclude Include="Engine\Assets\glTF\BaseGLTFAsset.hpp" />
+    <ClInclude Include="Engine\Assets\glTF\StaticGLTFAsset.hpp" />
+    <ClInclude Include="Engine\Assets\glTF\SkinnedGLTFAsset.hpp" />
+    <ClInclude Include="Engine\Assets\Importer\GLTFImporter.hpp" />
+    <ClInclude Include="Engine\Core\Application\Application.hpp" />
+    <ClInclude Include="Engine\Core\Camera\Camera.hpp" />
+    <ClInclude Include="Engine\Core\Collision\Collision.hpp" />
+    <ClInclude Include="Engine\Core\Collision\CollisionBox.hpp" />
+    <ClInclude Include="Engine\Core\Collision\CollisionCapsule.hpp" />
+    <ClInclude Include="Engine\Core\Collision\CollisionSphere.hpp" />
+    <ClInclude Include="Engine\Core\Components\Components.hpp" />
+    <ClInclude Include="Engine\Core\Core.hpp" />
+    <ClInclude Include="Engine\Core\Input\InputSystem.hpp" />
+    <ClInclude Include="Engine\Core\Time\TimeSystem.hpp" />
+    <ClInclude Include="Engine\Renderer\Clustering\ClusterLights.hpp" />
+    <ClInclude Include="Engine\Renderer\Culling\SceneCuller.hpp" />
+    <ClInclude Include="Engine\Renderer\Debug\DebugRenderer.hpp" />
+    <ClInclude Include="Engine\Renderer\Environment\EnvironmentInfo.hpp" />
+    <ClInclude Include="Engine\Renderer\Scene\Scene.hpp" />
+    <ClInclude Include="Engine\Renderer\Shadows\ShadowMapPass.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\BaseRenderer.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Buffers\Buffer.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Commands\CommandBuffer.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Commands\CommandPool.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Core\Instance.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Core\Surface.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Core\Swapchain.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Descriptors\Descriptor.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Descriptors\DescriptorLayout.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Device\Device.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Device\PhysicalDevice.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Images\Image.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Images\ImageView.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Images\Sampler.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Pipeline\ComputePipeline.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Pipeline\Pipeline.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassAttachment.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\RenderPasses\RenderPassSpecification.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Shaders\Shader.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\Shaders\ShaderRegistry.hpp" />
+    <ClInclude Include="Engine\Renderer\Vulkan\VulkanRenderer.hpp" />
+    <ClInclude Include="Tests\Test1.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
